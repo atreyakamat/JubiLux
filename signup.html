@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sign Up</h1>
+    </header>
+    <form action="index.html" method="post">
+        <label for="username">Enter Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male"> Male<br>
+        <input type="radio" id="female" name="gender" value="female"> Female<br>
+        <input type="radio" id="other" name="gender" value="other"> Other<br><br>
+
+        <label for="interests">Interests:</label><br>
+        <input type="checkbox" id="sports" name="interests" value="sports"> Sports<br>
+        <input type="checkbox" id="music" name="interests" value="music"> Music<br>
+        <input type="checkbox" id="reading" name="interests" value="reading"> Reading<br>
+        <input type="checkbox" id="Others" name="interests" value="Others"> Others<br><br>
+
+        <label for="country">Country:</label><br>
+        <select id="country" name="country">
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+        </select><br><br>
+
+        <label for="bio">Bio:</label><br>
+        <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
+
+        <label for="favColor">Favorite Color:</label><br>
+        <input type="color" id="favColor" name="favColor"><br><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="event">Event Date & Time:</label><br>
+        <input type="datetime-local" id="event" name="event"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="poster">Upload Event Poster:</label><br>
+        <input type="file" id="poster" name="poster"><br><br>
+
+        <label for="profileImage">Profile Image:</label><br>
+        <input type="image" src="images/10-profile-picture-ideas-to-make-you-stand-out.jpg" alt="Profile Image" style="height: 100px; width: 100px;;"><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" min="1" max="100"><br><br>
+
+        <label for="password">Create Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="range">Event Complexity:</label><br>
+        <input type="range" id="range" name="range" min="1" max="10"><br><br>
+
+        <label for="search">Search:</label><br>
+        <input type="search" id="search" name="search"><br><br>
+
+        <label for="apptTime">Preferred Time:</label><br>
+        <input type="time" id="apptTime" name="apptTime"><br><br>
+
+        <label for="website">Website:</label><br>
+        <input type="url" id="website" name="website"><br><br>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ADD Operation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add New Event</h1>
+    </header>
+    <form action="index.html" method="post">
+        <label for="eventName">Event Name:</label><br>
+        <input type="text" id="eventName" name="eventName"><br><br>
+
+        <label for="eventType">Event Type:</label><br>
+        <input type="radio" id="conference" name="eventType" value="conference"> Conference<br>
+        <input type="radio" id="workshop" name="eventType" value="workshop"> Workshop<br>
+        <input type="radio" id="concert" name="eventType" value="concert"> Concert<br>
+        <input type="radio" id="Others" name="eventType" value="Others"> Others<br><br>
+
+        <label for="features">Event Features:</label><br>
+        <input type="checkbox" id="food" name="features" value="food"> Food<br>
+        <input type="checkbox" id="music" name="features" value="music"> Music<br>
+        <input type="checkbox" id="networking" name="features" value="networking"> Networking<br><br>
+
+        <label for="date">Event Date:</label><br>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="time">Event Time:</label><br>
+        <input type="time" id="time" name="time"><br><br>
+
+        <label for="location">Location:</label><br>
+        <textarea id="location" name="location" rows="4" cols="50"></textarea><br><br>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Add Event">
+    </form>
+
+</body>
+</html>
