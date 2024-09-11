@@ -1,31 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header, footer {
-    background-color: #4a90e2;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-
 section {
     margin: 20px;
 }
-
-h2 {
-    color: #333333;
+.head4{
+    color: #ffffff;
+    background-color: #4c00ff;
+}
+#saral {
+    color: #ffffff;
+    background-color: #007bff;
 }
 
 h1{ 
     color: #ffffff
 }
-
+* {
+    color:#000000;
+}
 img {
     display: block;
     margin: 10px 0;
@@ -59,11 +49,23 @@ th {
 ul, ol, dl {
     margin: 20px 0;
 }
-
+ol li {
+    color: red;
+}
 ul li, ol li {
     margin: 5px 0;
 }
+div > p{
+    color: blueviolet
+}
 
+h2 + p{
+    background-color: aqua;
+}
+
+h2 ~ p{
+    color: rgb(136, 0, 102);
+}
 dt {
     font-weight: bold;
 }
