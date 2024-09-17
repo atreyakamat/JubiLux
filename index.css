@@ -25,6 +25,18 @@ a {
     color: #007bff;
     text-decoration: none;
 }
+.sticky-header {
+    position: sticky;
+    top: 0; /* Sticks at the top */
+    background-color: #ff6600; /* You can customize the background color */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000; /* Ensure it stays on top */
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
 
 a:hover {
     text-decoration: underline;

@@ -10,10 +10,17 @@ h1 {
 }
 
 header, footer {
-    background-color: #4a90e2;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    width: 100%; 
+    background-color: #4a90e2; 
+color: white; 
+padding: 20px 0; 
+text-align: center; 
+font-size: 24px; 
+font-weight: bold; 
+position: relative; 
+top: 0; 
+left: 0; 
+z-index: 999; 
 }
 form {
     background-color: #fff;
@@ -48,6 +55,7 @@ textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-family: inherit;
 }
 
 input[type="radio"],
@@ -55,19 +63,31 @@ input[type="checkbox"] {
     margin-right: 5px;
 }
 
-input[type="submit"],
+input[type="submit"]:hover{
+        background-color: #4a90e2;
+        color: white;
+        cursor: pointer;
+    
+}
 input[type="reset"] {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     margin-right: 10px;
 }
-
+label::before {
+    content: "→ "; /* Adds an arrow before label text */
+    color: #4a90e2;
+}
 input[type="submit"] {
     background-color: #28a745;
     color: white;
 }
 
+label::after {
+    content: " *"; /* Adds an asterisk after required fields */
+    color: red;
+}
 input[type="reset"] {
     background-color: #dc3545;
     color: white;
