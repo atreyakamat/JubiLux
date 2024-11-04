@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jubilux - Create Event</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="events.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .background {
+            background-image: url('images/eventbg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5; 
+        }
+
+        .event-container {
+            max-width: 550px;
+            margin: 20px auto;
+            background-color: #3f2a60; 
+            padding: 20px;
+            border-radius: 8px;
+            position: relative; 
+        }
+
+        .event-container h2 {
+            text-align: center;
+            color: #fff;
+        }
+        header{
+            text-align: center;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 5px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #7f5dc7;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #9984d4;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div> 
+    <header>
+        <img class="Jubilux-Logo-head" src="images/jubilux logo.png" alt="Jubilux Logo">
+        <span class="title-home">Jubilux Entertainment</span>
+    </header>
+
+    <div class="event-container">
+        <h2>Create Event</h2>
+        <form id="eventForm" action="add_event.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="event_name">Event Name</label>
+                <input type="text" id="event_name" name="event_name" required>
+            </div>
+            <div class="form-group">
+                <label for="event_description">Event Description</label>
+                <textarea id="event_description" name="event_description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="event_date">Event Date</label>
+                <input type="datetime-local" id="event_date" name="event_date" required>
+            </div>
+            <div class="form-group">
+                <label for="event_location">Event Location</label>
+                <input type="text" id="event_location" name="event_location" required>
+            </div>
+            <div class="form-group">
+                <label for="event_fee">Event Fee (Leave as 0 for Free):</label>
+                <input type="number" id="event_fee" name="event_fee" step="0.01" value="0.00" required>
+            </div>
+            <div class="form-group">
+                <label for="event_image">Upload Event Image</label>
+                <input type="file" id="event_image" name="event_image" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn-submit">Create Event</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; Jubilux Event Management Co. All rights reserved.
+    </footer>
+</body>
+</html>

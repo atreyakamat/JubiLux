@@ -1,209 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Sign Up</title>
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Internal CSS -->
+    <meta charset="UTF-8">
+    <title>Jubilux-Signup</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="signup.js"></script>
+    <script>
+        function toggleFields() {
+            const attendeeFields = document.querySelector('.attendee-fields');
+            const hostFields = document.querySelector('.host-fields');
+            if (document.getElementById('user_type_attendee').checked) {
+                attendeeFields.style.display = 'block';
+                hostFields.style.display = 'none';
+            } else if (document.getElementById('user_type_host').checked) {
+                attendeeFields.style.display = 'none';
+                hostFields.style.display = 'block';
+            } else {
+                attendeeFields.style.display = 'none';
+                hostFields.style.display = 'none';
+            }
+        }
+    </script>
     <style>
-        /* Universal selector */
-        * {
-            box-sizing: border-box;
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
         }
 
-        /* Element selector */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        .background {
+            background-image: url('images/signupbg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5; 
         }
 
-        header, footer {
-            width: 100%; 
-                background-color: #4a90e2; 
-    color: white; 
-    padding: 20px 0; 
-    text-align: center; 
-    font-size: 24px; 
-    font-weight: bold; 
-    position: relative; 
-    top: 0; 
-    left: 0; 
-    z-index: 999; 
-}
-
-        /* ID selector */
-        #signup-form {
-            background-color: #fff;
+        .signup-container {
+            max-width: 550px;
+            margin: 20px auto;
+            background-color: #3f2a60; 
             padding: 20px;
             border-radius: 8px;
-            max-width: 600px;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; 
         }
 
-        /* Class selector */
+        .signup-container h2 {
+            text-align: center;
+            color: #fff;
+        }
+
         .form-group {
+            display: flex;
+            flex-direction: column;
             margin-bottom: 15px;
         }
 
-        /* Grouping selector */
-        label, input, select, textarea {
-            display: block;
+        .form-group label {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .form-group input, 
+        .form-group select {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 5px;
+        }
+
+        .btn-submit {
             width: 100%;
-        }
-
-        .relative-box {
-            position: relative;
-            top: 20px;
-            background-color: #e0f7fa;
             padding: 10px;
-            border: 1px solid #00796b;
+            background-color: #7f5dc7;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        .fixed-box {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background-color: #c5cae9;
-            padding: 10px;
-            border: 1px solid #6fb834;
+        .btn-submit:hover {
+            background-color: #9984d4;
         }
 
-        body {
-            background-color: #e3f2fd;
-            background-image: url('background-pattern.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        /* Pseudo-classes */
-        input:focus {
-            border-color: #42a5f5;
-            outline: none;
-        }
-
-        /* Pseudo-elements */
-        label::before {
-            content: "✧ ";
+        .host-fields, .attendee-fields {
+            display: none;
         }
     </style>
 </head>
-
 <body>
+    <div class="background"></div> 
     <header>
-        <h1>Sign Up</h1>
+        <img class="Jubilux-Logo-head" src="images/jubilux logo.png" alt="Jubilux Logo">
+        <span class="title-home">Jubilux Entertainment</span>
     </header>
-    
-    <form id="signup-form" action="index.html" method="post">
-        <div class="form-group">
-            <label for="username">Enter Username:</label>
-            <input type="text" id="username" name="username">
-        </div>
-        
-        <div class="fixed-box">
-            Sign Up
-        </div>    
-        
-        <div class="form-group">
-            <label for="gender">Gender:</label>
-            <input type="radio" id="male" name="gender" value="male"> Male<br>
-            <input type="radio" id="female" name="gender" value="female"> Female<br>
-            <input type="radio" id="other" name="gender" value="other"> Other
-        </div>
 
-        <div class="form-group">
-            <label for="interests">Interests:</label>
-            <input type="checkbox" id="sports" name="interests" value="sports"> Sports<br>
-            <input type="checkbox" id="music" name="interests" value="music"> Music<br>
-            <input type="checkbox" id="reading" name="interests" value="reading"> Reading<br>
-            <input type="checkbox" id="Others" name="interests" value="Others"> Others
-        </div>
-
-        <div class="form-group">
-            <label for="country">Country:</label>
-            <select id="country" name="country">
-                <option value="india">India</option>
-                <option value="usa">USA</option>
-                <option value="uk">UK</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="bio">Bio:</label>
-            <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
-        </div>
-
-        <div class="form-group">
-            <label for="favColor">Favorite Color:</label>
-            <input type="color" id="favColor" name="favColor">
-        </div>
-
-        <div class="form-group">
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob">
-        </div>
-
-        <div class="form-group">
-            <label for="event">Event Date & Time:</label>
-            <input type="datetime-local" id="event" name="event">
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-        </div>
-
-        <div class="form-group">
-            <label for="poster">Upload Event Poster:</label>
-            <input type="file" id="poster" name="poster">
-        </div>
-
-        <div class="form-group">
-            <label for="profileImage">Profile Image:</label>
-            <input type="image" src="images/10-profile-picture-ideas-to-make-you-stand-out.jpg" alt="Profile Image" style="height: 100px; width: 100px;">
-        </div>
-
-        <div class="form-group">
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" min="1" max="100">
-        </div>
-
-        <div class="form-group">
-            <label for="password">Create Password:</label>
-            <input type="password" id="password" name="password">
-        </div>
-
-        <div class="form-group">
-            <label for="range">Event Complexity:</label>
-            <input type="range" id="range" name="range" min="1" max="10">
-        </div>
-
-        <div class="form-group">
-            <label for="search">Search:</label>
-            <input type="search" id="search" name="search">
-        </div>
-
-        <div class="form-group">
-            <label for="apptTime">Preferred Time:</label>
-            <input type="time" id="apptTime" name="apptTime">
-        </div>
-
-        <div class="form-group">
-            <label for="website">Website:</label>
-            <input type="url" id="website" name="website">
-        </div>
-
-        <input type="reset" value="Reset">
-        <input type="submit" value="Submit">
-    </form>
-
-    <div class="relative-box">
-        &copy; Jubilux Event Management Co. All rights reserved.
+    <div class="signup-container">
+        <h2>Create an Account</h2>
+        <form id="signupForm" action="signup.php" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div id="passwordError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <div id="confirmPasswordError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Phone Number</label>
+                <input type="text" id="phone_number" name="phone_number">
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="China">China</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="European Union">European Union</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <div class="form-group">
+                <label>Account Type</label>
+                <div>
+                    <input type="radio" id="user_type_attendee" name="user_type" value="attendee" required onchange="toggleFields()">
+                    <label for="user_type_attendee">Attendee</label>
+                </div>
+                <div>
+                    <input type="radio" id="user_type_host" name="user_type" value="host" required onchange="toggleFields()">
+                    <label for="user_type_host">Host</label>
+                </div>
+            </div>
+            <div class="attendee-fields">
+                <div class="form-group">
+                    <label>Interests</label>
+                    <div>
+                        <input type="checkbox" id="interest_music" name="interest[]" value="Music">
+                        <label for="interest_music">Music</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interest_art" name="interest[]" value="Art">
+                        <label for="interest_art">Art</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interest_tech" name="interest[]" value="Technology">
+                        <label for="interest_tech">Technology</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interest_food" name="interest[]" value="Food">
+                        <label for="interest_food">Food</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interest_sports" name="interest[]" value="Sports">
+                        <label for="interest_sports">Sports</label>
+                    </div>
+                </div>
+            </div>
+            <div class="host-fields">
+                <div class="form-group">
+                    <label for="organization_name">Organization Name</label>
+                    <input type="text" id="organization_name" name="organization_name">
+                </div>
+                <div class="form-group">
+                    <label for="role_in_organization">Role in Organization</label>
+                    <input type="text" id="role_in_organization" name="role_in_organization">
+                </div>
+                <div class="form-group">
+                    <label for="event_specialization">Event Specialization</label>
+                    <input type="text" id="event_specialization" name="event_specialization">
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Sign Up</button>
+        </form>
     </div>
 
-
+    <footer>
+        &copy; Jubilux Event Management Co. All rights reserved.
+    </footer>
 </body>
-
 </html>

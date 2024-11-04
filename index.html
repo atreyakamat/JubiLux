@@ -2,19 +2,308 @@
 <html lang="en">
 <head>
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #230c33;
+            color: white;
         }
 
-        header, footer {
-            background-color: #4a90e2;
-            color: #fff;
-            padding: 10px;
+        header {
+            background-color: #9984d4;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .Jubilux-Logo-head {
+            width: 130px;
+        }
+
+        .title-home {
+            font-weight: bold;
+            font-size: 40px;
             text-align: center;
+            flex: 1;
+        }
+
+        .btn {
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: #7f5dc7;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #9984d4;
+        }
+
+        .image-container {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            position: relative;
+        }
+
+        .images {
+            display: inline-block;
+            object-fit: fill;
+            padding: 0;
+            margin-right: 20px;
+        }
+
+        .images:hover {
+            box-shadow: 5px 5px 5px #caa8f5;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: #3f2a60;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            color: black;
+            width: 300px;
+            text-align: center;
+        }
+
+        .testimonial {
+            border-left: 4px solid #9984d4;
+            padding: 10px;
+            width: 300px;
+            margin: 10px;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        footer {
+            background-color: #9984d4;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        a {
+            color: #7f5dc7;
+            text-decoration: none;
+        }
+    </style>
+    <title>Goa Event Management</title>
+</head>
+<body>
+    <header>
+        <img class="Jubilux-Logo-head" src="images/jubilux logo.png" alt="Jubilux Logo">
+        <span class="title-home">Jubilux Entertainment</span>
+        <div>
+            <a href="signin.html"><button class="btn">Sign In</button></a>
+            <a href="signup.html"><button class="btn">Sign Up</button></a>
+            <a href="add.html"><button class="btn">Add Event</button></a>
+        </div>
+    </header>
+    
+    <h2>Explore Upcoming Events</h2>
+    <div class="image-container">
+        <div class="images">
+            <img src="images/animescreening.jpg" style="width: 350px;">
+        </div>
+        <div class="images">
+            <img src="images/stand-up.webp" style="width: 350px;">
+        </div>
+        <div class="images">
+            <img src="images/okttoberfest.avif" style="width: 367px;">
+        </div>
+    </div>
+
+    <section>
+        <h2>Featured Events</h2>
+        <div class="flex-container">
+            <div class="card">
+                <img src="images/event1.jpg" alt="Event 1" style="width: 100%; border-radius: 8px;">
+                <h3>Sunburn Festival</h3>
+                <p>Date: Dec 27-28, 2024</p>
+                <a href="event-details.html">View Details</a>
+            </div>
+            <div class="card">
+                <img src="images/event2.jpg" alt="Event 2" style="width: 100%; border-radius: 8px;">
+                <h3>Goa Carnival</h3>
+                <p>Date: Feb 2025</p>
+                <a href="event-details.html">View Details</a>
+            </div>
+            <!-- Add more featured events as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>What Our Attendees Say</h2>
+        <div class="flex-container">
+            <blockquote class="testimonial">
+                "Had an amazing experience at the Goa Carnival! Highly recommend it!"
+                <cite>- Sarah, Attendee</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+                "The Sunburn Festival was unforgettable. Can't wait for next year!"
+                <cite>- John, Attendee</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section>
+        <h2>Stay Updated!</h2>
+        <form style="display: flex; flex-direction: column; align-items: center;">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Explore Event Categories</h2>
+        <div class="flex-container">
+            <div style="text-align: center;">
+                <img src="images/music-icon.png" alt="Music" style="width: 60px;">
+                <h3>Music Festivals</h3>
+            </div>
+            <div style="text-align: center;">
+                <img src="images/cultural-icon.png" alt="Culture" style="width: 60px;">
+                <h3>Cultural Events</h3>
+            </div>
+            <div style="text-align: center;">
+                <img src="images/sports-icon.png" alt="Sports" style="width: 60px;">
+                <h3>Sports Events</h3>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Follow Us</h2>
+        <div style="display: flex; justify-content: center;">
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook" style="width: 40px; margin: 0 10px;"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter" style="width: 40px; margin: 0 10px;"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram" style="width: 40px; margin: 0 10px;"></a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>What is the ticket price?</summary>
+            <p>Ticket prices vary by event. Please check the event details for more information.</p>
+        </details>
+        <details>
+            <summary>How can I contact customer support?</summary>
+            <p>You can reach us at support@goaevents.com.</p>
+        </details>
+        <!-- Add more FAQs as needed -->
+    </section>
+
+    <footer>
+        &copy; Jubilux Event Management Co. All rights reserved.
+    </footer>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #230c33;
+        }
+
+        header {
+            background-color: #9984d4;
+            height: 150px;
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space items evenly */
+            padding: 0 20px; /* Add padding */
+        }
+
+        .Jubilux-Logo-head {
+            width: 130px;
+        }
+
+        .title-home {
+            font-weight: bold;
+            font-size: 40px;
+            text-align: center;
+            flex: 1; /* Allow title to take available space */
+        }
+
+        .btn {
+            margin-left: 10px; /* Space between buttons */
+        }
+
+        .image-container {
+            display: flex;
+            overflow: hidden; /* Hide overflow for scrolling effect */
+            white-space: nowrap; /* Prevent line breaks */
+            width: 100%; /* Full width */
+            position: relative;
+        }
+
+        .images {
+            display: inline-block;
+            object-fit: fill;
+            padding: 0;
+            margin-right: 20px; /* Space between images */
+            animation: scroll 10s linear infinite; /* Animation for scrolling */
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(100%); /* Start from the right */
+            }
+            to {
+                transform: translateX(-100%); /* End at the left */
+            }
+        }
+
+        .images:hover {
+            box-shadow: 5px 5px 5px #caa8f5;
+        }
+
+        /* Additional styles for section and footer */
+        section {
+            padding: 20px;
+            color: white;
+        }
+
+        footer {
+            background-color: #9984d4;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
     <title>Goa Event Management</title>
@@ -22,34 +311,42 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Goa Event Management</h1>
-        <p>Your one-stop solution for all the upcoming events in Goa.</p>
-        <a href="signin.html"><button class="btn" style="position: relative; margin-left: 750px; top: -40px;">Sign In</button></a><br>
-        <a href="signup.html"><button class="btn" style="position: relative; margin-left: 890px; top: -65px;">Sign Up</button></a>
-        <a href="add.html"><button class="btn" style="position: relative; margin-left: 1045px; top: -91px;">Add Event</button></a>
+        <img class="Jubilux-Logo-head" src="images/jubilux logo.png" alt="Jubilux Logo">
+        <span class="title-home">Jubilux Entertainment</span>
+        <div>
+            <a href="signin.html"><button class="btn">Sign In</button></a>
+            <a href="signup.html"><button class="btn">Sign Up</button></a>
+            <a href="add.html"><button class="btn">Add Event</button></a>
+        </div>
     </header>
+    
     <p class="sticky-header">Create your account today!!</p>
-
-    <section>
-        <h2 id="saral">Explore Upcoming Events</h2>
-        <img src="images\goa-beaches-1202x800.webp" alt="Goa Beach" style="width: 970px; height: 250px">
-        <p>Enjoy the serene beaches of Goa while attending amazing events</p>
-        <img src="images\2023-09-08T18_49_20.202Z2.webp" alt="Goa Festival" style="width: 970px; height: 250px">
-        <p>Experience vibrant festivals that Goa is famous for</p>
-    </section>
+    
+    <h2 id="saral">Explore Upcoming Events</h2>
+    <div class="image-container">
+        <div class="images">
+            <img src="images/animescreening.jpg" style="width: 350px;">
+        </div>
+        <div class="images">
+            <img src="images/stand-up.webp" style="width: 350px;">
+        </div>
+        <div class="images">
+            <img src="images/okttoberfest.avif" style="width: 367px;">
+        </div>
+    </div>
 
     <section>
         <h2 id="saral">Event Resources</h2>
         <p>Check out our Goa Tourism Website for more information.</p>
-            <a href="https://www.goatourism.gov.in/" target="_blank">
-            <img src="images\Goa-Tourism-Logo1-1900x700_c.jpg" alt="Google Us" style="width:100px; text-align: center;"></a>
+        <a href="https://www.goatourism.gov.in/" target="_blank">
+            <img src="images/Goa-Tourism-Logo1-1900x700_c.jpg" alt="Google Us" style="width:100px; text-align: center;">
+        </a>
         <p>Visit our About Us page to learn more about our services.</p>
-        
     </section>
 
     <section>
         <h2 id="saral">Event Schedule</h2>
-        <table border ="1" cellspacing="0" cellpadding="10">
+        <table border="1" cellspacing="0" cellpadding="10">
             <tr>
                 <th>Event Name</th> 
                 <th>Date</th>
@@ -97,8 +394,9 @@
             <p>We offer the most comprehensive event listings and provide all the necessary details for a great experience.</p>
         </div>
     </section>
+
     <footer>
         &copy; Jubilux Event Management Co. All rights reserved.
     </footer>
 </body>
-</html>
+</html> -->

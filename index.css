@@ -1,87 +1,115 @@
-section {
-    margin: 20px;
-}
-.head4{
-    color: #ffffff;
-    background-color: #4c00ff;
-}
-#saral {
-    color: #ffffff;
-    background-color: #007bff;
-}
+ body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #230c33;
+            color: white;
+        }
 
-h1{ 
-    color: #ffffff
-}
-* {
-    color:#000000;
-}
-img {
-    display: block;
-    margin: 10px 0;
-}
+        header {
+            background-color: #9984d4;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: relative;
+        }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-.sticky-header {
-    position: sticky;
-    top: 0; /* Sticks at the top */
-    background-color: #ff6600; /* You can customize the background color */
-    color: white;
-    padding: 10px;
-    text-align: center;
-    z-index: 1000; /* Ensure it stays on top */
-    font-size: 24px;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
-}
+        .Jubilux-Logo-head {
+            width: 130px;
+        }
 
-a:hover {
-    text-decoration: underline;
-}
+        .title-home {
+            font-weight: bold;
+            font-size: 40px;
+            text-align: center;
+            flex: 1;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
+        .btn {
+            margin-left: 10px;
+            padding: 20px 35px;
+            font-size: large;
+            background-color: #7f5dc7;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-th {
-    background-color: #4a90e2;
-    color: white;
-}
+        .btn:hover {
+            background-color: #9984d4;
+        }
 
-ul, ol, dl {
-    margin: 20px 0;
-}
-ol li {
-    color: red;
-}
-ul li, ol li {
-    margin: 5px 0;
-}
-div > p{
-    color: blueviolet
-}
+        .image-container {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            position: relative;
+        }
 
-h2 + p{
-    background-color: aqua;
-}
+        .images {
+            display: inline-block;
+            object-fit: fill;
+            padding: 0;
+            margin-right: 20px;
+        }
+        .images:hover {
+            box-shadow: 5px 5px 5px #caa8f5;
+        }
 
-h2 ~ p{
-    color: rgb(136, 0, 102);
-}
-dt {
-    font-weight: bold;
-}
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: #3f2a60;
+            border-radius: 8px;
+        }
 
-dd {
-    margin-left: 20px;
-}
+        h2 {
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            color: black;
+            width: 300px;
+            text-align: center;
+        }
+
+        .testimonial {
+            border-left: 4px solid #9984d4;
+            padding: 10px;
+            width: 300px;
+            margin: 10px;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        footer {
+            background-color: #9984d4;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        a {
+            color: #7f5dc7;
+            text-decoration: none;
+        }

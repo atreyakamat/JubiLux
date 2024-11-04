@@ -1,23 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sign In</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Sign In - Jubilux Event Management</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .background {
+            background-image: url('images/signupbg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5; 
+        }
+
+        .signin-container {
+            max-width: 550px;
+            margin: 20px auto;
+            background-color: #3f2a60; 
+            padding: 20px;
+            border-radius: 8px;
+            position: relative; 
+            z-index: 1;
+        }
+
+        .signin-container h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .form-group input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 5px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #7f5dc7;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #9984d4;
+        }
+        .signupbtn {
+            color: #ffffff; 
+            transition: text-decoration 0.3s;
+        }
+        .signupbtn:hover {
+            text-decoration: underline;
+        }
+        .foot {
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+            background-color: #9984d4; 
+            margin-top: auto; 
+        }
+    </style>
 </head>
 <body>
+    <div class="background"></div>
+    
     <header>
-        <h1>Sign In</h1>
+        <a href="index.php">
+            <img class="Jubilux-Logo-head" src="images/jubilux logo.png" alt="Jubilux Logo">
+        </a>
+        <span class="title-home">Jubilux Entertainment</span>
     </header>
-    <form action="index.html" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br><br>
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br><br>
+    <div class="signin-container">
+        <h2>Sign In</h2>
+        <form action="signin.php" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn-submit">Sign In</button>
+        </form>
+        <p style="color: #fff; text-align: center; margin-top: 15px;">
+            Don't have an account? <a href="signup.html" class="signupbtn">Sign Up</a>
+        </p>
+    </div>
 
-        <input type="reset" value="Reset">
-        <input type="submit" value="Sign In">
-    </form>
+    <footer class="foot">
+        &copy; Jubilux Event Management Co. All rights reserved.
+    </footer>
+
+    <script src="signin.js"></script>
 </body>
 </html>
-
